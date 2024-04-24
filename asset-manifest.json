@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/GrapFood_TTL/static/css/main.9c64fcc3.css",
-    "main.js": "/GrapFood_TTL/static/js/main.54c7fcd1.js",
+    "main.js": "/GrapFood_TTL/static/js/main.29d1fb10.js",
     "static/js/453.0189ad4c.chunk.js": "/GrapFood_TTL/static/js/453.0189ad4c.chunk.js",
     "static/media/look.png": "/GrapFood_TTL/static/media/look.7c78d6d11d36a9fcc314.png",
     "index.html": "/GrapFood_TTL/index.html",
     "main.9c64fcc3.css.map": "/GrapFood_TTL/static/css/main.9c64fcc3.css.map",
-    "main.54c7fcd1.js.map": "/GrapFood_TTL/static/js/main.54c7fcd1.js.map",
+    "main.29d1fb10.js.map": "/GrapFood_TTL/static/js/main.29d1fb10.js.map",
     "453.0189ad4c.chunk.js.map": "/GrapFood_TTL/static/js/453.0189ad4c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c64fcc3.css",
-    "static/js/main.54c7fcd1.js"
+    "static/js/main.29d1fb10.js"
   ]
 }

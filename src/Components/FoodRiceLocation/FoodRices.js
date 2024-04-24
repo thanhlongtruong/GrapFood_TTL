@@ -1,9 +1,9 @@
-import data from "../../Props/DataFoodRiceLocation/dataItemFoodRiceLocation";
-import { FitemFood } from "../FunctionComponentsSame/ItemFood";
+import data from '../../Props/DataFoodRiceLocation/dataItemFoodRiceLocation';
+import { FitemFood } from '../FunctionComponentsSame/ItemFood';
 
 export function FFoodRice() {
   return (
-    <div className="list-food-special-offers">
+    <div className="grid w-full grid-cols-4-[0-288px] justify-between gap-y-12">
       {data.map((item) => (
         <FitemFood
           href={item.href}

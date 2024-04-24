@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import "../../App.css";
-import { ClassNamePageHome } from "../../App";
-import data from "../../Props/DataFoodOwnRestaurant/dataItemFoodOwnRestaurant";
+import { useEffect, useState } from 'react';
+import '../../App.css';
+import { ClassNamePageHome } from '../../App';
+import data from '../../Props/DataFoodOwnRestaurant/dataItemFoodOwnRestaurant';
 // style={{ display: "block" }}
 
 export function WindowOrder() {
@@ -11,10 +11,7 @@ export function WindowOrder() {
       <div className="container-drawer-order-food">
         <span onClick={toggleWindow}></span>
         <div className="box-content-drawer-order-food">
-          <div
-            className="header-box-content-drawer-order-food"
-            onClick={toggleWindow}
-          >
+          <div className="header-box-content-drawer-order-food" onClick={toggleWindow}>
             &#10005;
           </div>
           <div className="content">
@@ -69,49 +66,46 @@ export const useBodyScroll = () => {
   const classNamePageHome = ClassNamePageHome();
 
   useEffect(() => {
-    const drawerElement = document.querySelector(".drawer-order-food");
+    const drawerElement = document.querySelector('.drawer-order-food');
     setElement(drawerElement);
   }, []);
 
   useEffect(() => {
-    bodyStyle.overflowY = isLocked ? "hidden" : "auto";
+    bodyStyle.overflowY = isLocked ? 'hidden' : 'auto';
   }, [isLocked, bodyStyle]);
 
   const toggle = () => {
     setLocked(!isLocked);
-    element.style.display = "block";
-    classNamePageHome.style.filter = "brightness(70%)";
+    element.style.display = 'block';
+    classNamePageHome.style.filter = 'brightness(70%)';
   };
 
   const toggleWindow = () => {
-    bodyStyle.overflowY = "auto";
-    element.style.display = "none";
-    classNamePageHome.style.filter = "brightness(100%)";
+    bodyStyle.overflowY = 'auto';
+    element.style.display = 'none';
+    classNamePageHome.style.filter = 'brightness(100%)';
   };
   return [isLocked, toggle, toggleWindow];
 };
-
+// onClick = { toggle };
 export function FCItemOrderFood(props) {
   const [isLocked, toggle, toggleWindow] = useBodyScroll();
   return (
     <div
-      className={`item-food-own-restaurant ${props.className}`}
-      onClick={toggle}
+      className={`font-ttl-edit1 flex h-[154px] w-[384px] cursor-pointer select-none flex-row justify-between rounded-lg  bg-white p-3 ${props.opacity_food}`}
     >
-      <img src={props.src} alt={props.alt} className={props.hiddenImg} />
-      <div className="info-food-own-restaurant">
-        <h3>{props.topic}</h3>
-        <div className="box-price-and-btnAdd">
-          <div className="box-note-discount-price">
-            <div className="note">
-              <span className="discount">{props.discount}</span>
-              <span className="real-price">{props.priceOld}</span>
-            </div>
-            <h4>{props.priceNew}</h4>
-          </div>
-          <div className="btn-add-food">
-            <p>+</p>
-          </div>
+      <img src={props.src} alt={props.alt} className={`h-32 w-32 rounded-lg object-cover ${props.hiddenImg}`} />
+      <div className="relative h-full w-[220px]">
+        <p className="max-h-1/2 absolute top-0 line-clamp-2 min-h-6 w-full overflow-hidden">{props.topic}</p>
+        <div className={`${props.hidden_priceOld} absolute bottom-8 flex h-8 flex-row gap-2 text-sm`}>
+          <p className="flex h-5 w-fit items-center rounded-sm bg-orange-200 px-1 font-medium text-orange-500">
+            {props.discount}
+          </p>
+          <p className="text-gray-400 line-through">{props.priceOld}</p>
+        </div>
+        <div className="absolute bottom-0 flex h-8 w-full flex-row justify-between text-xl font-bold">
+          {props.priceNew}
+          <p className="right-0 h-8 w-8 rounded-full bg-green-600 text-center text-white">&#43;</p>
         </div>
       </div>
     </div>

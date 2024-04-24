@@ -23,13 +23,15 @@ function App() {
   // Gắn sự kiện lắng nghe sự thay đổi tiêu đề trang
 
   return (
-    <Routes>
-      <Route path="/GrapFood-TTL" element={FHome()} />
-      <Route path="/Food-Rice-Restaurant-Location" element={FoodRiceRestaurantLocation()} />
-      <Route path="/Detail-Own-Restaurant-Food-Rice" element={<OwnRestaurant />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/GrapFood-TTL" element={FHome()} />
+        <Route path="/Food-Rice-Restaurant-Location" element={FoodRiceRestaurantLocation()} />
+        <Route path="/Detail-Own-Restaurant-Food-Rice" element={<OwnRestaurant />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 export default App;
-/* <Footer /> */
 // {WindowOrder()}

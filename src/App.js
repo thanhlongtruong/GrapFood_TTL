@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/FE-GrapFood-TTL" element={FHome()} />
+      <Route path="/GrapFood-TTL" element={FHome()} />
       <Route path="/Food-Rice-Restaurant-Location" element={FoodRiceRestaurantLocation()} />
       <Route path="/Detail-Own-Restaurant-Food-Rice" element={<OwnRestaurant />} />
     </Routes>

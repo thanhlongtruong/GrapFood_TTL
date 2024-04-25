@@ -3,14 +3,15 @@ import '../index.css';
 
 function FHeader() {
   const [isBgColor, setBgColor] = useState('inherit');
-  const [isBgImg, setBgImg] = useState('https://food.grab.com/static/images/logo-grabfood2.svg');
+  // const [isBgImg, setBgImg] = useState('https://food.grab.com/static/images/logo-grabfood2.svg');
+  const [isBgImg, setBgImg] = useState('https://food.grab.com/static/images/logo-grabfood-white2.svg');
 
   useEffect(() => {
     const handCroll = () => {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (scrollTop === 0) {
-        setBgColor('bg-inherit');
+        setBgColor('sm:bg-inherit');
         setBgImg('https://food.grab.com/static/images/logo-grabfood-white2.svg');
       } else {
         setBgColor('bg-white shadow shadow-gray-300');
@@ -23,11 +24,11 @@ function FHeader() {
     };
   }, []);
   let currentURL = window.location.href;
-  console.log(currentURL);
+  console.log(isBgImg);
   let state = currentURL === 'http://localhost:3000/FE-GrapFood-TTL' ? true : false;
 
   return (
-    <header className={`ttlS-flex sticky top-0 z-10 h-12 w-full bg-red-400 px-3 sm:h-20`}>
+    <header className={`ttlS-flex ttlS-repon sticky top-0 z-10 h-12 bg-white sm:h-20 ${isBgColor}`}>
       <a href="/FE-GrapFood-TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
         {currentURL !== 'http://localhost:3000/FE-GrapFood-TTL' ? (
           <img
@@ -64,7 +65,7 @@ function FHeader() {
       )} */}
 
       <div className="flex h-7 w-fit flex-row gap-4 sm:h-fit">
-        <a href="/" className="ttl-style-header hidden sm:block">
+        <a href="/" className="ttlS-header hidden sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,11 +82,11 @@ function FHeader() {
           </svg>
         </a>
 
-        <a href="/" className="sm:ttl-style-header ttl-style-header-sm">
-          Đăng nhập/Đăng kí
+        <a href="/" className="sm:ttlS-header ttlS-flex ttlS-header-sm">
+          <p className="text-sm">Đăng nhập/Đăng kí</p>
         </a>
 
-        <a href="/" className="sm:ttl-style-header ttl-style-header-sm flex">
+        <a href="/" className="sm:ttlS-header ttlS-header-sm ttlS-flex">
           <span className="">VI</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

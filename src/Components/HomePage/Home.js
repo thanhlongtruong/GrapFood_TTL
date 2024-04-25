@@ -23,17 +23,16 @@ const arrBackground = [
 export function FHome() {
   let randomBackground = Math.floor(Math.random() * arrBackground.length);
   return (
-    <div className="flex h-fit w-screen flex-col">
+    <div className="h-fit w-full">
       <FHeader />
-      {/* <div className="-mt-20 h-fit w-full bg-white"> */}
-      <div className="h-fit w-screen p-3">
-        <img
-          src={`${arrBackground[randomBackground]}`}
-          alt=""
-          className="hidden h-96 w-full select-none object-cover sm:block"
-        />
-        {/* <div className="my-10 w-full border bg-green-300"></div> */}
-        <div className="sm:ttlS-box-1200 flex-col">
+
+      <img
+        src={`${arrBackground[randomBackground]}`}
+        alt=""
+        className="hidden h-96 w-full select-none object-cover sm:-mt-20 sm:block"
+      />
+      <div className="ttlS-repon">
+        <div className="flex-col">
           <div className="ttlS-title">
             <p className="h-full whitespace-nowrap">Ưu đãi GrabFood tại &nbsp;</p>
             <p class="line-clamp-1 w-fit text-green-600">780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam</p>
@@ -42,12 +41,12 @@ export function FHome() {
           {dataSpecialOffers()}
         </div>
 
-        <div className="sm:ttlS-box-1200 mt-14 flex-col pl-1">
+        <div className=" mt-14 flex-col pl-1">
           <p className="ttlS-title">There's something for everyone!</p>
           {Category()}
         </div>
 
-        <div className="sm:ttl-style-box-1200 mt-20 flex-col px-1">
+        <div className=" mt-20 flex-col px-1">
           <p className="ttlS-title text-4xl">Vì sao bạn nên Order trên GrabFood?</p>
 
           <ul className="list-image-[url(https://food.grab.com/static/images/tick.svg)] pl-5 text-lg">
@@ -71,36 +70,35 @@ export function FHome() {
 
           <div className="ttlS-btnMore">Read More</div>
         </div>
+      </div>
+      <div className="grid h-fit w-full grid-cols-1 gap-y-10 bg-[#f7f7f7] p-4 sm:grid-cols-2 sm:gap-x-9">
+        <div className="flex flex-col items-center justify-start">
+          <img
+            src="https://food.grab.com/static/page-home/bottom-food-options.svg"
+            alt=""
+            loading="lazy"
+            className="h-40 w-40"
+          />
+          <p className="mb-0 mt-6 text-center text-2xl">Curated restaurants</p>
+          <p className="text-center text-gray-600">
+            From small bites to big meals, we won't limit your appetite. Go ahead and order all you want.
+          </p>
+        </div>
 
-        <div className="grid h-fit grid-cols-1 gap-y-10 bg-[#f7f7f7] p-4 sm:grid-cols-2 sm:gap-x-9">
-          <div className="flex flex-col items-center justify-start">
-            <img
-              src="https://food.grab.com/static/page-home/bottom-food-options.svg"
-              alt=""
-              loading="lazy"
-              className="h-40 w-40"
-            />
-            <p className="mb-0 mt-6 text-center text-2xl">Curated restaurants</p>
-            <p className="text-center text-gray-600">
-              From small bites to big meals, we won't limit your appetite. Go ahead and order all you want.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <img
-              src="https://food.grab.com/static/images/ilus-cool-features-app.svg"
-              alt=""
-              loading="lazy"
-              className="h-40 w-40"
-            />
-            <p className="mb-0 mt-6 text-center text-2xl">More cool features available on the app</p>
-            <p className="text-center text-gray-600">
-              Download Grab app to use other payment methods and enjoy seamless communication with your driver.
-            </p>
-            <div className="mt-6 flex h-auto w-full flex-row flex-wrap  justify-center gap-7 lg:flex-nowrap">
-              <img src="https://food.grab.com/static/images/logo-appstore.svg" alt="" loading="lazy" />
-              <img src="https://food.grab.com/static/images/logo-playstore.svg" alt="" loading="lazy" />
-            </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src="https://food.grab.com/static/images/ilus-cool-features-app.svg"
+            alt=""
+            loading="lazy"
+            className="h-40 w-40"
+          />
+          <p className="mb-0 mt-6 text-center text-2xl">More cool features available on the app</p>
+          <p className="text-center text-gray-600">
+            Download Grab app to use other payment methods and enjoy seamless communication with your driver.
+          </p>
+          <div className="mt-6 flex h-auto w-full flex-row flex-wrap  justify-center gap-7 lg:flex-nowrap">
+            <img src="https://food.grab.com/static/images/logo-appstore.svg" alt="" loading="lazy" />
+            <img src="https://food.grab.com/static/images/logo-playstore.svg" alt="" loading="lazy" />
           </div>
         </div>
       </div>

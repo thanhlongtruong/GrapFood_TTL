@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .ttlS-header {
-  @apply pointer-events-none rounded border border-gray-300 bg-white p-2 font-normal;
+  @apply pointer-events-none rounded border border-gray-300 bg-white p-2  font-normal;
 }
 .ttlS-header-sm {
   @apply pointer-events-none rounded border border-gray-300 bg-white p-1 text-xs font-medium;
 }
 .ttlS-box-1200 {
-  @apply mx-auto flex w-[1200px] flex-row items-center justify-between;
+  @apply lg:mx-auto lg:flex lg:w-[1200px] lg:flex-row lg:items-center lg:justify-between;
 }
 .ttlS-title {
   @apply mb-7 flex text-xl font-bold sm:text-4xl;
@@ -29,7 +29,9 @@
 .ttlS-ruler {
   @apply my-5 w-full border bg-green-300 sm:my-10;
 }
-
+.ttlS-repon {
+  @apply h-fit w-full px-2 sm:px-8 lg:px-16;
+}
 @layer base {
   html {
     scroll-behavior: smooth;

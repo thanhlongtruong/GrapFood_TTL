@@ -29,7 +29,7 @@ function FHeader() {
 
   return (
     <header className={`ttlS-flex ttlS-repon sticky top-0 z-10 h-12 bg-white sm:h-20 ${isBgColor}`}>
-      <a href="/FE-GrapFood-TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
+      <a href="/GrapFood_TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
         {currentURL !== 'http://localhost:3000/FE-GrapFood-TTL' ? (
           <img
             src="https://food.grab.com/static/images/logo-grabfood2.svg"

@@ -111,9 +111,14 @@ function FFooter() {
           })}
         </div>
         <div className="ttlS-ruler"></div>
-        <div className="flex gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:grid-cols-none">
           <img src="https://food.grab.com/static/images/logo-appstore.svg" alt="" loading="lazy" />
-          <img src="https://food.grab.com/static/images/logo-playstore.svg" alt="" loading="lazy" />
+          <img
+            src="https://food.grab.com/static/images/logo-playstore.svg"
+            alt=""
+            loading="lazy"
+            className="ttlS-flex last:justify-end"
+          />
         </div>
         <div className="mt-7 grid grid-cols-2 text-white sm:grid-cols-3">
           <p className="col-span-2 sm:col-span-1">© 2024 Grab</p>

@@ -32,6 +32,9 @@
 .ttlS-repon {
   @apply h-fit w-full px-2 sm:px-8 lg:px-16;
 }
+.ttlS-hideShow {
+  @apply hidden sm:block;
+}
 @layer base {
   html {
     scroll-behavior: smooth;

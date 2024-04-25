@@ -1,8 +1,6 @@
 function WindowOrder(isState) {
-  console.log(isState + "2");
-
   return (
-    <div className="drawer-order-food" style={{ display: "block" }}>
+    <div className="drawer-order-food" style={{ display: 'block' }}>
       <div className="container-drawer-order-food">
         <span></span>
         <div className="box-content-drawer-order-food">

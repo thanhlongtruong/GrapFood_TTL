@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import ItemsCatagory from '../../Props/DataHome/dataItemCategorysGrapFoodHome';
 function ItemCategory(props) {
   return (
-    <a href={props.href} className="h-fit w-fit select-none">
+    <Link to={props.href} className="h-fit w-fit select-none">
       <img src={props.src} alt={props.alt} loading="lazy" className="ttlS-rounded-md" />
       <p className="text-lg font-semibold text-black">{props.title}</p>
-    </a>
+    </Link>
   );
 }
 function Category() {

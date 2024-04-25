@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 export function FitemFood(props) {
   return (
     // <a href={props.href} className="h-fit w-72">
-    <a href={props.href} className="h-fit w-auto">
+    <Link to={props.href} className="h-fit w-auto">
       <img src={props.src} alt={props.alt} loading="lazy" className="ttlS-rounded-md" />
 
       <div className="max-h-48 min-h-32 w-fit">
@@ -36,6 +38,6 @@ export function FitemFood(props) {
           {props.warn !== '' && <div class="border-t pt-2">{props.warn}</div>}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

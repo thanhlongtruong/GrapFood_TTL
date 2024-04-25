@@ -26,11 +26,11 @@ export function FHome() {
     <div className="h-fit w-full">
       <FHeader />
 
-      <img
-        src={`${arrBackground[randomBackground]}`}
-        alt=""
-        className="hidden h-96 w-full select-none object-cover sm:-mt-20 sm:block"
-      />
+      <div className="ttlS-hideShow w-full sm:-mt-20">
+        <img src={`${arrBackground[randomBackground]}`} alt="" className="h-96 w-full select-none object-cover" />
+        <div className="ttlS-ruler"></div>
+      </div>
+
       <div className="ttlS-repon">
         <div className="flex-col">
           <div className="ttlS-title">

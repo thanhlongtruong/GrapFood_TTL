@@ -3,7 +3,7 @@ import Category from './Category';
 import ItemLine from '../../Props/DataHome/dataItemLineWhyChooseGrapFoodHome';
 import FHeader from '../Header';
 import FFooter from '../Footer';
-
+import { TitleLocationShipFood } from '../FunctionComponentsSame/TitleLocationShipFood';
 function FItemLine(props) {
   return (
     <li className="mb-4">
@@ -32,16 +32,16 @@ export function FHome() {
       </div>
 
       <div className="ttlS-repon">
-        <div className="flex-col">
-          <div className="ttlS-title">
-            <p className="h-full whitespace-nowrap">Ưu đãi GrabFood tại &nbsp;</p>
-            <p class="line-clamp-1 w-fit text-green-600">780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam</p>
-          </div>
+        <div className="">
+          <TitleLocationShipFood
+            topic="Ưu đãi GrabFood tại"
+            location="780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam"
+          />
 
           {dataSpecialOffers()}
         </div>
 
-        <div className=" mt-14 flex-col pl-1">
+        <div className="mt-14">
           <p className="ttlS-title">There's something for everyone!</p>
           {Category()}
         </div>

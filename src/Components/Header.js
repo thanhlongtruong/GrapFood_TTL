@@ -4,6 +4,7 @@ import '../index.css';
 function FHeader() {
   const [isBgColor, setBgColor] = useState('inherit');
   const [isBgImg, setBgImg] = useState('https://food.grab.com/static/images/logo-grabfood2.svg');
+  const [isWidth, setWidth] = useState(document.documentElement.clientWidth);
 
   useEffect(() => {
     const handCroll = () => {
@@ -22,11 +23,20 @@ function FHeader() {
       window.removeEventListener('scroll', handCroll);
     };
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(document.documentElement.clientWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   let currentURL = window.location.href;
   let state = currentURL.includes('GrapFood_TTL') ? true : false;
-  let width = document.documentElement.clientWidth;
   let logoSm;
-  if (width <= 425) {
+  if (isWidth <= 425) {
     logoSm = (
       <img
         src="https://food.grab.com/static/images/logo-grabfood2.svg"
@@ -38,6 +48,32 @@ function FHeader() {
     logoSm = (
       <img src={`${isBgImg}`} alt="Logo-GrapFood-ThanhLong xin tài trợ" className="h-8 w-[90px] sm:h-14 sm:w-36" />
     );
+  }
+  let shipFoodLocation;
+  if (!state) {
+    shipFoodLocation = (
+      <div className="ttlS-flex rounded-md border border-gray-300 bg-white p-1">
+        <p className="whitespace-nowrap font-semibold">Giao đến</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-3 mr-1 h-8 w-8 text-red-600"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+          />
+        </svg>
+        <p className="line-clamp-1">780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam</p>
+      </div>
+    );
+  } else {
+    shipFoodLocation = null;
   }
 
   return (
@@ -54,29 +90,7 @@ function FHeader() {
           logoSm
         )}
       </a>
-
-      {/* {!state && (
-        <div className="ttl-style-header flex h-[42px] w-96 flex-row items-center p-0 px-2 ">
-          <p className="whitespace-nowrap">Giao đến</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="ml-3 mr-1 h-8 w-8 text-red-600"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-            />
-          </svg>
-          <p className="line-clamp-1">780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam</p>
-        </div>
-      )} */}
-
+      {isWidth >= 1101 ? shipFoodLocation : null}
       <div className="flex h-7 w-fit flex-row gap-4 sm:h-fit">
         <a href="/" className="ttlS-header hidden sm:block">
           <svg

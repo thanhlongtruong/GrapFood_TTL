@@ -3,7 +3,7 @@ import { FitemFood } from '../FunctionComponentsSame/ItemFood';
 
 export function FFoodRice() {
   return (
-    <div className="grid w-full grid-cols-4-[0-288px] justify-between gap-y-12">
+    <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
       {data.map((item) => (
         <FitemFood
           href={item.href}

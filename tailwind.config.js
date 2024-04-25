@@ -9,6 +9,7 @@ module.exports = {
       gridTemplateColumns: {
         '4-[0-288px]': 'repeat(4, minmax(0, 288px))',
         '3-[0-384px]': 'repeat(3, minmax(0, 384px))',
+        '6-[0-179px]': 'repeat(6, minmax(0, 179px))',
       },
       fontFamily: {
         'ttl-edit1':

@@ -2,8 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import './App.css';
 
-import Header from './Components/Header';
-import Footer from './Components/Footer';
 import { FHome } from './Components/HomePage/Home';
 import { FoodRiceRestaurantLocation } from './Components/FoodRiceLocation/FoodRiceRestautantLocation';
 import { OwnRestaurant } from './Components/DetailOwnRestaurant/OwnRestaurant';
@@ -29,7 +27,6 @@ function App() {
         <Route path="/Food-Rice-Restaurant-Location" element={FoodRiceRestaurantLocation()} />
         <Route path="/Detail-Own-Restaurant-Food-Rice" element={<OwnRestaurant />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

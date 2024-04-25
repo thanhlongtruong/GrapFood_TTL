@@ -3,7 +3,7 @@ import { FitemFood } from '../FunctionComponentsSame/ItemFood';
 
 function dataSpecialOffers() {
   return (
-    <div className="flex flex-row justify-between">
+    <div className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4">
       {data.map((item) => (
         <FitemFood
           key={item.id}
@@ -19,6 +19,7 @@ function dataSpecialOffers() {
           href={item.href}
         />
       ))}
+      <div className="ttlS-btnMore col-span-full grid">See all promotions</div>
     </div>
   );
 }

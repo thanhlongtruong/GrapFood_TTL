@@ -27,8 +27,8 @@ function FHeader() {
   let state = currentURL === 'http://localhost:3000/FE-GrapFood-TTL' ? true : false;
 
   return (
-    <header className={`a mb-6 h-12 w-44 bg-slate-400`}>
-      {/* <a href="/FE-GrapFood-TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
+    <header className={`ttlS-flex sticky top-0 z-10 h-12 w-full bg-red-400 px-3 sm:h-20`}>
+      <a href="/FE-GrapFood-TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
         {currentURL !== 'http://localhost:3000/FE-GrapFood-TTL' ? (
           <img
             src="https://food.grab.com/static/images/logo-grabfood2.svg"
@@ -39,7 +39,7 @@ function FHeader() {
         ) : (
           <img src={`${isBgImg}`} alt="Logo-GrapFood-ThanhLong xin tài trợ" className="h-8 w-[90px] sm:h-14 sm:w-36" />
         )}
-      </a> */}
+      </a>
 
       {/* {!state && (
         <div className="ttl-style-header flex h-[42px] w-96 flex-row items-center p-0 px-2 ">
@@ -63,7 +63,7 @@ function FHeader() {
         </div>
       )} */}
 
-      {/* <div className="absolute right-0 flex h-7 w-fit flex-row gap-4 sm:h-fit">
+      <div className="flex h-7 w-fit flex-row gap-4 sm:h-fit">
         <a href="/" className="ttl-style-header hidden sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,10 +98,10 @@ function FHeader() {
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </a>
-      </div> */}
+      </div>
     </header>
     // <header className={`${isBgColor} sticky top-0 z-10 flex h-12 w-screen bg-red-400 sm:h-20 sm:bg-white`}>
-    //   <div className="lg:ttl-style-box-1200 relative min-w-full max-w-screen-sm justify-normal items-center">
+    //   <div className="lg:ttl-style-box-1200 relative min-w-full max-w-screen-sm items-center justify-normal">
     //     <a href="/FE-GrapFood-TTL" className="inline-block h-8 w-[90px] sm:h-14 sm:w-36">
     //       {currentURL !== 'http://localhost:3000/FE-GrapFood-TTL' ? (
     //         <img
@@ -119,7 +119,7 @@ function FHeader() {
     //       )}
     //     </a>
 
-    //     {!state && (
+    //     {/* {!state && (
     //       <div className="ttl-style-header flex h-[42px] w-96 flex-row items-center p-0 px-2 ">
     //         <p className="whitespace-nowrap">Giao đến</p>
     //         <svg
@@ -139,7 +139,7 @@ function FHeader() {
     //         </svg>
     //         <p className="line-clamp-1">780 Sư Vạn Hạnh, P.12, Q.10, Hồ Chí Minh, 70000, Vietnam</p>
     //       </div>
-    //     )}
+    //     )} */}
 
     //     <div className="absolute right-0 flex h-fit w-auto flex-row">
     //       <a href="/" className="ttl-style-header">

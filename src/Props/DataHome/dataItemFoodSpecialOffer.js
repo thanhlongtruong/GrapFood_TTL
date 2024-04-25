@@ -32,7 +32,8 @@ const ListItem = [
     time: ' 35 phút ',
     distance: ' 2.9km ',
     special: ' 🔥Grab Ngon Rẻ🔥 Bao Giá & Bao Ship',
-    warn: 'Sắp đóng cửa - Đặt món trước 5 AM',
+    // warn: 'Sắp đóng cửa - Đặt món trước 5 AM',
+    warn: '',
     href: '#',
   },
   {

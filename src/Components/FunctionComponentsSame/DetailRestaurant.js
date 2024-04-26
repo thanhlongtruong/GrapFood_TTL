@@ -1,7 +1,7 @@
 export function DetailRestaurant(props) {
   return (
-    <div className="ttl-style-box-1200 h-72 flex-col items-start border border-red-950 pt-6 mb-6">
-      <p className="ttl-style-title-of-box">{props.nameRestaurant}</p>
+    <div className="mb-6 h-fit pt-6">
+      <p className="ttlS-title">{props.nameRestaurant}</p>
       <p className="line-clamp-1 text-gray-500">{props.nameFood}</p>
       <div className="my-2 flex flex-row gap-2 text-gray-500">
         <img src="https://food.grab.com/static/images/icons/icon-star.svg" alt="star-food" className="h-6 w-6" />
@@ -25,8 +25,8 @@ export function DetailRestaurant(props) {
         />
         {props.special}
       </div>
-      <div className="flex flex-row gap-10 text-gray-700">
-        <div className="ttl-style-header flex h-[42px] w-96 flex-row items-center p-0 ">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="ttlS-header ttlS-flex h-[42px] justify-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,14 +45,14 @@ export function DetailRestaurant(props) {
           <p>Ngày giao hàng: </p>
           <p> &nbsp;Hôm nay</p>
         </div>
-        <div className="ttl-style-header flex h-[42px] w-96 flex-row items-center p-0">
+        <div className="ttlS-header ttlS-flex h-[42px] justify-start">
           <img
             src="https://food.grab.com/static/images/icons/icon-clock.svg"
             alt="time-ship-food"
             className="mx-3 h-6 w-6"
           />
-          <div>Thời gian giao hàng: </div>
-          <div> &nbsp;Ngay bây giờ</div>
+          <div className="line-clamp-1">Thời gian giao hàng: </div>
+          <div className="line-clamp-1"> &nbsp;Ngay bây giờ</div>
         </div>
       </div>
     </div>

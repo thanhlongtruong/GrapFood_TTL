@@ -1,7 +1,6 @@
 import { FCItemOrderFood } from '../DetailOwnRestaurant/ItemOrderFood';
 import Food from '../../Props/DataFoodOwnRestaurant/dataItemFoodOwnRestaurant';
 import TopicFood from '../../Props/DataFoodOwnRestaurant/dataTitleOfBoxFoodOwnRestaurant';
-import item from '../FoodRiceLocation/ChooseOption';
 
 const BoxFood = [];
 const Foods = Food.filter((data) => {
@@ -16,12 +15,14 @@ const new_BoxFood = [...new Set(BoxFood)];
 
 export function BoxOder() {
   return (
-    <div className="ttl-style-box-1200 flex-col border border-green-800 pt-20">
+    <div className="">
       {new_BoxFood.map((items) => {
         return (
-          <div className="ttl-style-box-1200 flex-col border pb-9">
-            <p className="ttl-style-title-of-box">{items.title}</p>
-            <div className="grid w-full grid-cols-3-[0-384px] justify-between gap-y-6">
+          <div className="pb-9">
+            <p role="tabpanel" id={items.title} aria-controls={items.id} className="ttlS-title">
+              {items.title}
+            </p>
+            <div className="grid w-full grid-cols-1 gap-y-6 lg:grid-cols-3-[0-384px] lg:justify-between">
               {Foods.map((item) => {
                 if (item.ids === items.id) {
                   return (
@@ -35,6 +36,7 @@ export function BoxOder() {
                       priceOld={item.priceOld}
                       priceNew={item.priceNew}
                       opacity_food={item.state === true ? '' : 'contrast-50 cursor-not-allowed pointer-events-none'}
+                      css={item.state === true ? 'cursor-pointer' : 'cursor-not-allowed'}
                       hiddenImg={item.src === '' ? 'displayNone' : ''}
                       hidden_priceOld={item.priceOld === '' ? 'invisible' : ''}
                     />

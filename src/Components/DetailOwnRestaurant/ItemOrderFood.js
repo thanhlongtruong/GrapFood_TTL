@@ -92,22 +92,29 @@ export function FCItemOrderFood(props) {
   const [isLocked, toggle, toggleWindow] = useBodyScroll();
   return (
     <div
-      className={`font-ttl-edit1 flex h-[154px] w-[384px] cursor-pointer select-none flex-row justify-between rounded-lg  bg-white p-3 ${props.opacity_food}`}
+      className={`flex h-[154px] ${props.css} select-none flex-col gap-6 lg:rounded-lg lg:border lg:bg-white lg:p-3`}
     >
-      <img src={props.src} alt={props.alt} className={`h-32 w-32 rounded-lg object-cover ${props.hiddenImg}`} />
-      <div className="relative h-full w-[220px]">
-        <p className="max-h-1/2 absolute top-0 line-clamp-2 min-h-6 w-full overflow-hidden">{props.topic}</p>
-        <div className={`${props.hidden_priceOld} absolute bottom-8 flex h-8 flex-row gap-2 text-sm`}>
-          <p className="flex h-5 w-fit items-center rounded-sm bg-orange-200 px-1 font-medium text-orange-500">
-            {props.discount}
-          </p>
-          <p className="text-gray-400 line-through">{props.priceOld}</p>
-        </div>
-        <div className="absolute bottom-0 flex h-8 w-full flex-row justify-between text-xl font-bold">
-          {props.priceNew}
-          <p className="right-0 h-8 w-8 rounded-full bg-green-600 text-center text-white">&#43;</p>
+      <div className={`grid h-full grid-cols-[96px_auto] gap-5 sm:grid-cols-[128px_auto] ${props.opacity_food}`}>
+        <img
+          src={props.src}
+          alt={props.alt}
+          className={`h-24 w-24 rounded-lg object-cover sm:h-32 sm:w-32 ${props.hiddenImg}`}
+        />
+        <div className="relative h-full w-full">
+          <p className="max-h-1/2 absolute top-0 line-clamp-2 min-h-6 w-full overflow-hidden">{props.topic}</p>
+          <div className={`${props.hidden_priceOld} absolute bottom-8 flex h-8 flex-row gap-2 text-sm`}>
+            <p className="flex h-5 w-fit items-center rounded-sm bg-orange-200 px-1 font-medium text-orange-500">
+              {props.discount}
+            </p>
+            <p className="text-gray-400 line-through">{props.priceOld}</p>
+          </div>
+          <div className="absolute bottom-0 flex h-8 w-full flex-row justify-between text-xl font-bold">
+            {props.priceNew}
+            <p className="right-0 h-8 w-8 rounded-full bg-green-600 text-center text-white">&#43;</p>
+          </div>
         </div>
       </div>
+      <div className="col-span-2 border-b-2 border-gray-300 lg:hidden"></div>
     </div>
   );
 }

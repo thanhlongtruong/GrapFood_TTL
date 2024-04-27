@@ -47,7 +47,7 @@ function WindowOrder() {
               <input type="text" placeholder="E.g. No onions please" className="ttlS-btnMore my-0 mt-0 font-normal" />
             </div>
           </div>
-          <div className="ttlS-flex sticky bottom-0 z-10 mx-4 h-[10%] w-full flex-col justify-center gap-5 sm:flex-row">
+          <div className="ttlS-flex sticky bottom-0 z-10 mx-4 h-fit w-full flex-col justify-center gap-5 sm:flex-row md:h-[10%]">
             <div className="ttlS-flex justify-center gap-5">
               <p className="ttlS-header ttlS-flex h-10 w-10 justify-center p-0">&#8211;</p>
               <p className="ttlS-header ttlS-flex h-10 w-10 justify-center p-0">1</p>

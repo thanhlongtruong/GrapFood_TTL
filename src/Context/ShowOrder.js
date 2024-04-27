@@ -8,11 +8,7 @@ export const OrderProvider = ({ children }) => {
   const [isShow, setShow] = useState(false);
 
   const handleShow = () => {
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].state) {
-        setShow(!isShow);
-      }
-    }
+    setShow(!isShow);
   };
 
   useEffect(() => {}, [isShow]);

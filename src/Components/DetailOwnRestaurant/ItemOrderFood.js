@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import '../../App.css';
-import { ClassNamePageHome } from '../../App';
-import data from '../../Props/DataFoodOwnRestaurant/dataItemFoodOwnRestaurant';
-// style={{ display: "block" }}
+import { OrderContext } from '../../Context/ShowOrder';
 
 export function WindowOrder() {
-  const [isLocked, toggle, toggleWindow] = useBodyScroll();
   return (
     <div className="drawer-order-food">
       <div className="container-drawer-order-food">
-        <span onClick={toggleWindow}></span>
+        <span></span>
         <div className="box-content-drawer-order-food">
-          <div className="header-box-content-drawer-order-food" onClick={toggleWindow}>
-            &#10005;
-          </div>
+          <div className="header-box-content-drawer-order-food">&#10005;</div>
           <div className="content">
             <div className="info">
               <img
@@ -59,40 +54,14 @@ export function WindowOrder() {
     </div>
   );
 }
-export const useBodyScroll = () => {
-  const bodyStyle = document.body.style;
-  const [isLocked, setLocked] = useState(false);
-  const [element, setElement] = useState(null);
-  const classNamePageHome = ClassNamePageHome();
 
-  useEffect(() => {
-    const drawerElement = document.querySelector('.drawer-order-food');
-    setElement(drawerElement);
-  }, []);
-
-  useEffect(() => {
-    bodyStyle.overflowY = isLocked ? 'hidden' : 'auto';
-  }, [isLocked, bodyStyle]);
-
-  const toggle = () => {
-    setLocked(!isLocked);
-    element.style.display = 'block';
-    classNamePageHome.style.filter = 'brightness(70%)';
-  };
-
-  const toggleWindow = () => {
-    bodyStyle.overflowY = 'auto';
-    element.style.display = 'none';
-    classNamePageHome.style.filter = 'brightness(100%)';
-  };
-  return [isLocked, toggle, toggleWindow];
-};
-// onClick = { toggle };
 export function FCItemOrderFood(props) {
-  const [isLocked, toggle, toggleWindow] = useBodyScroll();
+  const { handleShow } = useContext(OrderContext);
+
   return (
     <div
       className={`flex h-[154px] ${props.css} select-none flex-col gap-6 lg:rounded-lg lg:border lg:bg-white lg:p-3`}
+      onClick={handleShow}
     >
       <div className={`grid h-full grid-cols-[96px_auto] gap-5 sm:grid-cols-[128px_auto] ${props.opacity_food}`}>
         <img

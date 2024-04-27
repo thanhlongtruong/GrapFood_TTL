@@ -19,7 +19,7 @@ export function BoxOder() {
       {new_BoxFood.map((items) => {
         return (
           <div className="pb-9">
-            <p role="tabpanel" id={items.title} aria-controls={items.id} className="ttlS-title">
+            <p id={items.title} className="ttlS-title">
               {items.title}
             </p>
             <div className="grid w-full grid-cols-1 gap-y-6 lg:grid-cols-3-[0-384px] lg:justify-between">
@@ -35,8 +35,8 @@ export function BoxOder() {
                       discount={item.discount}
                       priceOld={item.priceOld}
                       priceNew={item.priceNew}
-                      opacity_food={item.state === true ? '' : 'contrast-50 cursor-not-allowed pointer-events-none'}
-                      css={item.state === true ? 'cursor-pointer' : 'cursor-not-allowed'}
+                      opacity_food={item.state === true ? '' : 'contrast-50 cursor-not-allowed'}
+                      css={item.state === true ? 'cursor-pointer' : 'cursor-not-allowed pointer-events-none'}
                       hiddenImg={item.src === '' ? 'displayNone' : ''}
                       hidden_priceOld={item.priceOld === '' ? 'invisible' : ''}
                     />

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/GrapFood_TTL/static/css/main.a577ce51.css",
-    "main.js": "/GrapFood_TTL/static/js/main.330592e4.js",
+    "main.css": "/GrapFood_TTL/static/css/main.9d997e9b.css",
+    "main.js": "/GrapFood_TTL/static/js/main.240eece5.js",
     "static/js/453.0189ad4c.chunk.js": "/GrapFood_TTL/static/js/453.0189ad4c.chunk.js",
     "static/media/look.png": "/GrapFood_TTL/static/media/look.7c78d6d11d36a9fcc314.png",
     "index.html": "/GrapFood_TTL/index.html",
-    "main.a577ce51.css.map": "/GrapFood_TTL/static/css/main.a577ce51.css.map",
-    "main.330592e4.js.map": "/GrapFood_TTL/static/js/main.330592e4.js.map",
+    "main.9d997e9b.css.map": "/GrapFood_TTL/static/css/main.9d997e9b.css.map",
+    "main.240eece5.js.map": "/GrapFood_TTL/static/js/main.240eece5.js.map",
     "453.0189ad4c.chunk.js.map": "/GrapFood_TTL/static/js/453.0189ad4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a577ce51.css",
-    "static/js/main.330592e4.js"
+    "static/css/main.9d997e9b.css",
+    "static/js/main.240eece5.js"
   ]
 }
